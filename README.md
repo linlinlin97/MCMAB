@@ -34,18 +34,14 @@ The main paper provides three choices for working models: Linear Regression (LR)
 
 ## Functions for Experiments
 
-- `_env.py` and `real_env.py`: environment used for the simulation and the offline study of ADSP's campaign data
+- `_env.py` and `real_env.py`: environment used for the simulation and the offline study of ADSP's campaign data.
 - `_experiment.py`: Summarizes main functions used to run experiments in simulation.
 - `experiment_LR.ipynb`, `experiment_GP.ipynb`, and `experiment_NN.ipynb`: Python notebooks for running sample experiments for each prior in {LR, GP, NN}.
 - `_util.py`: helper functions.
 - `_analyzer.py`: post-process simulation results.
-- `Results_Plot.ipynb`: Python notebook summarizing simulation results
+- `Results_Plot.ipynb`: Python notebook summarizing simulation results.
 
 ## Others
 
-- `Contextual_Bandit.py`: script of Han2021 adapted to the multi-task setting
-- `_optimizer.py`: script used for the optimization step
-
-## Contact
-
-Please contact {lge, yxu63, jchu3}@ncsu.edu if you encounter any issues when running the code.
+- `Contextual_Bandit.py`: script of Han2021 adapted to the multi-task setting.
+- `_optimizer.py`: script used for the optimization step.
