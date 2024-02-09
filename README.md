@@ -14,38 +14,37 @@ Through extensive empirical evaluations with both synthetic data and real-world 
 
 ## Agents with Different Working Models
 
-The main paper provides three choices for prior distribution: Linear Regression (LR), Gaussian Process (GP), and Neural Network (NN).
+The main paper provides three choices for working models: Linear Regression (LR), Gaussian Process (GP), and Neural Network (NN).
 
 #### LR Agents (`LR` folder)
 
- -  `_agent_LR_MTB.py`: Posterior updating procedure for LR in MTB (concurrent) version.
- -  `_agent_LR_LB.py`: Posterior updating procedure for LR in sequential version.
- -  `_env_LR.py`: Simulation environment for LR used to generate results in the paper.
+ -  `_agent_LMM_MTB.py`: MCMAB with Linear Regression as the working model.
+ -  `_agent_LMM_LB.py`: Feature-determined version with Linear Regression as the working model.
+ -  `_agent_LMM_TS.py`: Feature-agnostic version with Linear Regression as the working model.
 
-#### GP Agents (`GPTS` folder)
+#### GP Agents (`GP` folder)
 
--  `_agent_GP_MTB_concurrent_fast.py`: Posterior updating procedure for GP in MTB (concurrent) version, with batch update and memory check to speed up posterior calculation.
--  `_agent_GP_concurrent_fast.py`: Posterior updating procedure for GP in sequential version, with batch update and memory check to speed up posterior calculation.
--  `_env_GP.py`: Simulation environment for GP used to generate results in the paper.
+-  `_agent_GP_MTB_fast.py`: MCMAB with Gaussian Process as the working model.
+-  `_agent_GP_fast.py`: Feature-determined version with Gaussian Process as the working model.
 
 #### NN Agents (`NN` folder)
 
- -  `_agent_NeuralTS_MTB.py`: Posterior updating procedure for NN in MTB (concurrent) version.
- -  `_agent_NeuralTS.py`: Posterior updating procedure for NN in sequential version.
- -  `_env_NN.py`: Simulation environment for NN used to generate results in the paper.
+ -  `_agent_NeuralTS_MTB.py`: MCMAB with Neural Network as the working model.
+ -  `_agent_NeuralTS.py`: Feature-determined version with Neural Network as the working model.
 
-## Experiment Scripts
+## Functions for Experiments
 
+- `_env.py` and `real_env.py`: environment used for the simulation and the offline study of ADSP's campaign data
 - `_experiment.py`: Summarizes main functions used to run experiments in simulation.
 - `experiment_LR.ipynb`, `experiment_GP.ipynb`, and `experiment_NN.ipynb`: Python notebooks for running sample experiments for each prior in {LR, GP, NN}.
-- `experiment_real.ipynb`: Python notebook for running real data from Amazon DSP side.
+- `_util.py`: helper functions.
+- `_analyzer.py`: post-process simulation results.
+- `Results_Plot.ipynb`: Python notebook summarizing simulation results
 
 ## Others
 
-- `Simulation` folder: Provides additional Python scripts to generate results in the simulation section of our main paper.
-- `optimization` folder: Holds supplementary testing files for the optimization step in our main algorithm.
-
-Feel free to explore the provided sample notebooks in the main repository.
+- `Contextual_Bandit.py`: script of Han2021 adapted to the multi-task setting
+- `_optimizer.py`: script used for the optimization step
 
 ## Contact
 
