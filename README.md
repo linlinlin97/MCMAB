@@ -1,6 +1,6 @@
 # Multi-Task-CMAB-for-Budget-Allocation
 
-This repository serves as supplementary material for our paper titled "Multi-Task Combinatorial Bandits for Budget Allocation".
+This repository serves as supplementary material for our paper titled ["Multi-Task Combinatorial Bandits for Budget Allocation"](https://arxiv.org/pdf/2301.13348).
 
 ## Abstract
 
